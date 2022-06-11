@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import SingleDatePicker from "./components/SingleDatePicker";
+import RangeDatePicker from "components/RangeDatePicker";
+import "public/css/style.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <SingleDatePicker />
+        {/* @ts-ignore */}
+        <RangeDatePicker
+          startDate={new Date(2020, 0, 15)}
+          endDate={new Date(2020, 1, 1)}
+        />
+      </div>
+    </>
   );
 }
 
